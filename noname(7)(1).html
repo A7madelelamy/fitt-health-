@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+<link rel="icon" type="image/x-icon" href="/storage/emulated/0/Download/20220723_145013.jpg">
+
+<link rel="stylesheet " href="noname(1110).css">
+<title>health area</title>
+
+</head>
+<body>
+<header>
+
+<div>
+<h1>أهلآ</h1>
+
+</div>
+
+
+<div>
+
+
+</div>
+</header>
+
+<section>
+
+<h1>هيا بنا نبدا</h1>
+
+<input  type="number"  id="one" placeholder="أدخل الطول (بوحدة المتر)" class="input" name="number" >
+<br>
+<input  type="number"   id="two" placeholder="أدخل السن" class="input" name="text" type="text">
+<br>
+<input 
+<input  type="number"   id="three" placeholder="أدخل الوزن" class="input" name="text" type="text">
+
+<button id="btn"> أضغط 
+</button>
+</section>
+<div class="big">
+<dialog class="contaner ">
+<img id="imga" src="/storage/emulated/0/Download/PicsArt_07-20-07.52.07.png" >
+<h2 >مؤشر كتلة الجسم</h2>
+<h3 id="red"></h3>
+<h2 class="five">معدل الايض</h2>
+
+
+
+<img id="imgc" src="/storage/emulated/0/Download/PicsArt_07-20-10.06.10.png">
+<h5 id="male"></h5>
+
+
+<img id="imgb" src="/storage/emulated/0/Download/PicsArt_07-20-10.05.39.png">
+
+<h5 id="female">ي</h5>
+<h3 id="blue"></h3>
+
+<a id="end" href="#" >رجوع</a>
+</dialog>
+</div>
+
+<script type="text/javascript">
+let end = document.getElementById("end");
+let female = document.getElementById("female");
+let male = document.getElementById("male");
+let go = document.getElementById("go");
+let imga = document.getElementById("imga");
+let one = document.getElementById("one");
+let two = document.getElementById("two");
+let three = document.getElementById("three");
+let btn = document.getElementById("btn");
+let red = document.getElementById("red");
+let dialog = document.querySelector("dialog ")
+
+let ahmed = btn.addEventListener("click" ,
+
+() => {
+
+let one= document.getElementById("one").value ;
+let two = document.getElementById("two").value;
+let three = document.getElementById("three").value;
+
+if (one>2.5){
+
+dialog.close();
+
+
+}else{
+
+let width = 1* three/(one*one);
+
+
+
+dialog.show();
+red.innerHTML= width;
+imga.style.display="block"
+male.innerHTML= 66.47+(13.7*three)+(500*one)-(6.8*two) ;
+female.innerHTML= 655.1+(9.6*three)+(180*one)-(4.7*two) ;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+)
+end.addEventListener("click",
+() =>{
+
+
+dialog.close();
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+)
+
+</script>
+
+</body>
+</html>
